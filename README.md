@@ -100,7 +100,7 @@ Full API documentation is in [`docs/03-api-reference.md`](docs/03-api-reference.
 ## Database Architecture
 
 - **MySQL** - Categories, products, customizations, payments (relational, ACID transactions)
-- **MongoDB** - Orders and analytics events (flexible schema, aggregation pipelines)
+- **MongoDB** - Orders, analytics events, and product images (flexible schema, binary storage)
 
 See [`docs/04-database-schema.md`](docs/04-database-schema.md) for detailed schemas.
 
@@ -147,7 +147,7 @@ Detailed documentation is available in the [`docs/`](docs/) directory:
 
 ## AI Disclosure
 
-This project was developed with the assistance of AI tools, including [Claude](https://claude.ai/) by Anthropic for code generation and documentation, and [Google Stitch](https://stitch.withgoogle.com/) for the frontend design.
+This project was developed with the assistance of AI tools, including [Claude](https://claude.ai/) by Anthropic for documentation generation, and [Google Stitch](https://stitch.withgoogle.com/) for the frontend design.
 
 ## License
 

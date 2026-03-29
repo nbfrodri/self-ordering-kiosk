@@ -24,6 +24,7 @@ The Self-Ordering Kiosk is a full-stack application that mimics the ordering sys
          │  - PedidoController     │
          │  - CocinaController     │
          │  - AnalyticsController  │
+         │  - AdminMenuController  │
          └─────┬──────────┬────────┘
                │          │
        ┌───────▼──┐  ┌────▼─────────┐
@@ -31,7 +32,7 @@ The Self-Ordering Kiosk is a full-stack application that mimics the ordering sys
        │          │  │              │
        │ Products │  │ Orders       │
        │ Payments │  │ Analytics    │
-       │ Catalog  │  │ Customizat.  │
+       │ Catalog  │  │ Product Imgs │
        └──────────┘  └──────────────┘
 ```
 
@@ -44,6 +45,7 @@ The Self-Ordering Kiosk is a full-stack application that mimics the ordering sys
 
 ### MongoDB (Document — Flexible Data)
 - **Orders with customizations**: Each order can have wildly different modification combinations. Storing `{"remove": ["onion", "pickles"], "add": ["extra cheese"]}` as a flexible JSON document is far simpler than creating relational bridge tables
+- **Product images**: Binary image data stored as base64 documents, served directly via API without relying on the filesystem
 - **Analytics events**: High-volume write operations for tracking user behavior — MongoDB handles this efficiently
 - **Schema flexibility**: New event types or order fields can be added without migrations
 

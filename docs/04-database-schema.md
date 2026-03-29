@@ -24,6 +24,9 @@
 | price                    | DECIMAL(8,2)  | NOT NULL                |
 | image_url                | VARCHAR(255)  | NULLABLE                |
 | is_available             | BOOLEAN       | DEFAULT true             |
+| is_featured              | BOOLEAN       | DEFAULT false            |
+| display_order            | INTEGER       | DEFAULT 0                |
+| card_size               | VARCHAR(255)   | DEFAULT 'normal'         |
 | preparation_time_minutes | INTEGER       | DEFAULT 5                |
 | created_at               | TIMESTAMP     |                          |
 | updated_at               | TIMESTAMP     |                          |
@@ -105,6 +108,22 @@ categories (1) ──── (N) products (1) ──── (N) product_customizat
 
 **Status values:** `pending` → `preparing` → `ready` → `delivered` | `cancelled`
 
+### Collection: `product_images`
+
+Stores product images as base64-encoded binary data, served via the API.
+
+```json
+{
+  "_id": "ObjectId(...)",
+  "product_id": 1,
+  "filename": "classic-burger.jpg",
+  "mime_type": "image/jpeg",
+  "data": "<base64-encoded image data>",
+  "created_at": "2026-03-28T10:00:00.000Z",
+  "updated_at": "2026-03-28T10:00:00.000Z"
+}
+```
+
 ### Collection: `analytics_events`
 
 ```json
@@ -140,4 +159,5 @@ categories (1) ──── (N) products (1) ──── (N) product_customizat
 | Payment records         | X     |         | Accounting integrity, no data loss                |
 | Order details           |       | X       | Flexible item modifications per order             |
 | Customizations per order|       | X       | Variable structure: some items have 0, some have 5|
+| Product images          |       | X       | Binary storage without filesystem dependency      |
 | Analytics events        |       | X       | High-volume writes, flexible schema, fast inserts |

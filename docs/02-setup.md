@@ -29,10 +29,12 @@ This will:
 
 ### 3. Access the application
 
-| URL                        | Description              |
-|----------------------------|--------------------------|
-| http://localhost:8000/kiosk | Customer ordering kiosk  |
-| http://localhost:8000/cocina | Kitchen display system  |
+| URL                             | Description              |
+|---------------------------------|--------------------------|
+| http://localhost:8000/kiosk      | Customer ordering kiosk  |
+| http://localhost:8000/kitchen    | Kitchen display system   |
+| http://localhost:8000/analytics  | Analytics dashboard      |
+| http://localhost:8000/admin/menu | Menu management panel    |
 
 ### 4. Useful commands
 

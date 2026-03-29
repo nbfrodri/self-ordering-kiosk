@@ -58,7 +58,8 @@
       "Bash(MSYS_NO_PATHCONV=1 docker exec kiosk_app php artisan tinker --execute=\"\necho \\\\App\\\\Models\\\\Product::where\\('is_featured', true\\)->count\\(\\) . ' featured products';\n\\\\App\\\\Models\\\\Product::where\\('is_featured', true\\)->get\\(['id','name']\\)->each\\(fn\\(\\\\$p\\) => print\\(\\\\$p->id . ': ' . \\\\$p->name . PHP_EOL\\)\\);\n\" 2>&1)",
       "Bash(MSYS_NO_PATHCONV=1 docker exec kiosk_app php artisan tinker --execute=\"\n\\\\$orders = \\\\App\\\\Models\\\\Order::count\\(\\);\n\\\\$events = \\\\App\\\\Models\\\\AnalyticsEvent::count\\(\\);\n\\\\$payments = \\\\App\\\\Models\\\\Payment::count\\(\\);\n\n\\\\App\\\\Models\\\\Order::truncate\\(\\);\n\\\\App\\\\Models\\\\AnalyticsEvent::truncate\\(\\);\n\\\\App\\\\Models\\\\Payment::truncate\\(\\);\n\necho \\\\\"Deleted: \\\\$orders orders, \\\\$events analytics events, \\\\$payments payments\\\\\";\n\" 2>&1)",
       "Bash(MSYS_NO_PATHCONV=1 docker exec kiosk_app php artisan tinker --execute=\"\n\\\\$o = \\\\App\\\\Models\\\\Order::first\\(\\);\necho json_encode\\(\\\\$o ? \\\\$o->toArray\\(\\) : 'no orders', JSON_PRETTY_PRINT\\);\n\" 2>&1)",
-      "Bash(xargs grep:*)"
+      "Bash(xargs grep:*)",
+      "Bash(ls -d /c/Users/Phobos/Desktop/Archivos/self-ordering-kiosk/vendor_old*)"
     ]
   }
 }

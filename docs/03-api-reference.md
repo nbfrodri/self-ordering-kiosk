@@ -245,7 +245,7 @@ Log an analytics event.
 }
 ```
 
-**Common Event Types:**
+**Allowed Event Types:**
 - `category_viewed` — Customer browsed a category
 - `product_viewed` — Customer opened a product detail
 - `item_added_to_cart` — Item added to cart
@@ -255,6 +255,8 @@ Log an analytics event.
 - `payment_screen_viewed` — Customer reached payment step
 - `preparation_started` — Kitchen started an order
 - `preparation_completed` — Kitchen completed an order
+- `customization_toggled` — Customization selected/deselected
+- `kiosk_session_started` — New kiosk session began
 
 ### GET /api/analiticas/resumen
 
@@ -288,3 +290,60 @@ Get analytics summary.
   }
 }
 ```
+
+---
+
+## Product Images
+
+### GET /api/products/{id}/image
+
+Serves the product image binary from MongoDB. Returns a 1x1 transparent GIF if no image exists.
+
+Supports `ETag` and `If-None-Match` headers for caching (returns `304 Not Modified` when unchanged).
+
+---
+
+## Admin Menu Management
+
+All admin endpoints are prefixed with `/api/admin`.
+
+### Categories
+
+| Method   | Endpoint                    | Description         |
+|----------|-----------------------------|---------------------|
+| `GET`    | `/api/admin/categories`     | List all categories |
+| `POST`   | `/api/admin/categories`     | Create a category   |
+| `PUT`    | `/api/admin/categories/{id}`| Update a category   |
+| `DELETE` | `/api/admin/categories/{id}`| Delete a category (cascades to products) |
+
+### Products
+
+| Method   | Endpoint                    | Description         |
+|----------|-----------------------------|---------------------|
+| `GET`    | `/api/admin/products`       | List all products   |
+| `POST`   | `/api/admin/products`       | Create a product    |
+| `PUT`    | `/api/admin/products/{id}`  | Update a product    |
+| `DELETE` | `/api/admin/products/{id}`  | Delete a product    |
+
+### Product Images
+
+| Method   | Endpoint                          | Description         |
+|----------|-----------------------------------|---------------------|
+| `POST`   | `/api/admin/products/{id}/image`  | Upload image (file or base64) |
+| `DELETE` | `/api/admin/products/{id}/image`  | Delete image        |
+
+Accepts `multipart/form-data` with an `image` file, or a JSON body with an `image` key containing a data-URI or raw base64 string. Allowed formats: JPEG, PNG, WebP, GIF (max 5 MB).
+
+### Customizations
+
+| Method   | Endpoint                                     | Description            |
+|----------|----------------------------------------------|------------------------|
+| `POST`   | `/api/admin/products/{id}/customizations`    | Add a customization    |
+| `PUT`    | `/api/admin/customizations/{id}`             | Update a customization |
+| `DELETE` | `/api/admin/customizations/{id}`             | Delete a customization |
+
+### Cache
+
+| Method | Endpoint                 | Description       |
+|--------|--------------------------|-------------------|
+| `POST` | `/api/admin/cache/clear` | Clear menu cache  |
