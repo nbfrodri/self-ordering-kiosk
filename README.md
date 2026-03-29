@@ -147,7 +147,7 @@ Detailed documentation is available in the [`docs/`](docs/) directory:
 
 ## AI Disclosure
 
-This project was developed with the assistance of AI tools, including [Claude](https://claude.ai/) by Anthropic for documentation generation, and [Google Stitch](https://stitch.withgoogle.com/) for the frontend design.
+This project was developed with the assistance of AI tools, including [Claude](https://claude.ai/) by Anthropic for some code generation and documentation, and [Google Stitch](https://stitch.withgoogle.com/) for the frontend design.
 
 ## License
 
