@@ -4,6 +4,23 @@ A full-featured self-ordering kiosk system for fast-food restaurants, built with
 
 Includes a customer-facing ordering interface, kitchen display system, admin menu management panel, and an analytics dashboard.
 
+## Preview
+
+![Customer kiosk showing the menu and an active order](docs/screenshots/kiosk.png)
+
+<table>
+  <tr>
+    <td width="50%"><a href="docs/screenshots/customization.png"><img src="docs/screenshots/customization.png" alt="Burger customization with extras and ingredient removal" /></a><br /><strong>Order customization</strong><br />Adjust ingredients and quantity before checkout.</td>
+    <td width="50%"><a href="docs/screenshots/kitchen.png"><img src="docs/screenshots/kitchen.png" alt="Kitchen display showing pending, preparing and ready demo orders" /></a><br /><strong>Kitchen display</strong><br />Track orders through preparation and pickup.</td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="docs/screenshots/admin.png"><img src="docs/screenshots/admin.png" alt="Administration panel with burger products and category controls" /></a><br /><strong>Menu management</strong><br />Manage categories, products and availability.</td>
+    <td width="50%"><a href="docs/screenshots/analytics.png"><img src="docs/screenshots/analytics.png" alt="Analytics dashboard with demo order totals and status distribution" /></a><br /><strong>Analytics</strong><br />Review order totals, statuses and popular items.</td>
+  </tr>
+</table>
+
+Screenshots from a local Docker instance using the seeded menu and sample orders. Payments are simulated; the figures shown are demo data. Select any image to inspect it at full size.
+
 ## Tech Stack
 
 ![Laravel](https://img.shields.io/badge/Laravel_12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
