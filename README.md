@@ -6,20 +6,20 @@ Includes a customer-facing ordering interface, kitchen display system, admin men
 
 ## Preview
 
-![Customer kiosk showing the menu and an active order](docs/screenshots/kiosk.png)
+![Customer kiosk showing the menu and an active order](docs/screenshots/menu-with-photos.png)
 
 <table>
   <tr>
-    <td width="50%"><a href="docs/screenshots/customization.png"><img src="docs/screenshots/customization.png" alt="Burger customization with extras and ingredient removal" /></a><br /><strong>Order customization</strong><br />Adjust ingredients and quantity before checkout.</td>
+    <td width="50%"><a href="docs/screenshots/customization-with-photo.png"><img src="docs/screenshots/customization-with-photo.png" alt="Burger customization with extras and ingredient removal" /></a><br /><strong>Order customization</strong><br />Adjust ingredients and quantity before checkout.</td>
     <td width="50%"><a href="docs/screenshots/kitchen.png"><img src="docs/screenshots/kitchen.png" alt="Kitchen display showing pending, preparing and ready demo orders" /></a><br /><strong>Kitchen display</strong><br />Track orders through preparation and pickup.</td>
   </tr>
   <tr>
-    <td width="50%"><a href="docs/screenshots/admin.png"><img src="docs/screenshots/admin.png" alt="Administration panel with burger products and category controls" /></a><br /><strong>Menu management</strong><br />Manage categories, products and availability.</td>
+    <td width="50%"><a href="docs/screenshots/menu-management.png"><img src="docs/screenshots/menu-management.png" alt="Administration panel with burger products and category controls" /></a><br /><strong>Menu management</strong><br />Manage categories, products and availability.</td>
     <td width="50%"><a href="docs/screenshots/analytics.png"><img src="docs/screenshots/analytics.png" alt="Analytics dashboard with demo order totals and status distribution" /></a><br /><strong>Analytics</strong><br />Review order totals, statuses and popular items.</td>
   </tr>
 </table>
 
-Screenshots from a local Docker instance using the seeded menu and sample orders. Payments are simulated; the figures shown are demo data. Select any image to inspect it at full size.
+Screenshots from a local Docker instance with a prepared sample menu, uploaded food photography and demo orders. Payments are simulated. [View checkout](docs/screenshots/checkout.png) · [Photo credits and capture notes](docs/screenshots/README.md). Select any image to inspect it at full size.
 
 ## Tech Stack
 
